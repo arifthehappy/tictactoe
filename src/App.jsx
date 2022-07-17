@@ -18,9 +18,8 @@ const App = () => {
 
   const {winner, winningSquares} = calculateWinner(current.board);
   
-
   const handleSquareClick = (position) => {
-    if(current.board[position] || winner){
+    if(current.board[position] || winner || currentMove !== history.length - 1) {
       return;
     }
 
